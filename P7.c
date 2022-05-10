@@ -26,27 +26,22 @@ int main() {
 	    int temp;
 	    for(i=0;i<n;i++)
 	    {
-	        for(j=0;j<n;j++)
-	        {
-	            if(p[i]>p[j])
-	            {
-	                temp=p[i];
-	                p[i]=p[j];
-	                p[j]=temp;
-	            }
-	        }
+			if(p[i]>p[0])
+			{
+				p[0]=p[i];
+			}
 	    }
-	    int k=0,m;
+	    int count=0,m;
 	    for(i=0;i<n;i++)
 	    {
 	        if(q[i]==p[0])
 	        {
-	        k++;
+	        count++;
 	        m=i;
 	
 	        }
 	    }
-	    if(k==1)
+	    if(count==1)
 	    printf("%d\n",a[m]);
 	   
 	    else
